@@ -1,0 +1,7 @@
+munch
+pyyaml
+tqdm
+openai
+dotenv
+faiss-cpu
+rich

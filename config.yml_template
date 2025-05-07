@@ -1,0 +1,30 @@
+paths:
+    raw_markdown: "./knowledge/raw"
+    intermediate: "./knowledge/intermediate"
+    processed_track: "./knowledge/processed_files.json"
+    vector_index: "./knowledge/faiss_index.bin"
+    inverted_index: "./knowledge/inverted_index.json"
+models:
+    summarization: "gpt-4"
+    tag_extraction: "gpt-4"
+    vision_caption: "gpt-4o"
+    text_embedding: "text-embedding-3-small"
+    query_summarization: "gpt-4"
+    dialog: "gpt-4"
+    answer_summarization: "gpt-4"
+vector_db:
+    m: 32  # parameter for HNSW
+    c: 200  # construction trade-off parameter
+    s: 50  # search trade-off parameter
+tag_merge:
+    chunk_size: 300  # how many tags per chunk per level
+    final_threshold: 400  # stop recursion when tags ≤ this
+generative:
+    max_summary_tokens: 8191  # for embedding using text-embedding-3-small
+qa:
+    top_k: 5  # first pass
+    tag_threshold: 3  # min docs/tag to consider
+    max_ref_docs: 10  # cap on |references|
+    random_seed: 42
+    summarize_chunk_size:  5
+    max_summarization_depth:  3
