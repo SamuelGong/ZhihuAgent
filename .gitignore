@@ -3,3 +3,4 @@ knowledge
 .env
 proxy.sh
 logs
+config.yml
