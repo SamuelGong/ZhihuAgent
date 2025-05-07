@@ -4,3 +4,5 @@ knowledge
 proxy.sh
 logs
 config.yml
+__pycache__
+.DS_store
